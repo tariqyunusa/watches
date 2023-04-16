@@ -1,6 +1,7 @@
 var index = 0;
 var yearW = 0;
 var titleNew = 0;
+var watchPrice = 0;
 
 
 show_image(index);
@@ -10,8 +11,10 @@ function show_image(i){
     var year = document.getElementById("year");
     var images = document.getElementsByClassName("image");
     var title = document.getElementById('title');
+    var price = document.getElementById("price");
     var watchName = ["DIUEGE", "SANIEGE"];
     var years = ["1971", "1992"];
+    var priceWatch = ["$499", "$515"]
 
     for(i = 0; i < images.length; i++)
         images[i].style.display = "none"
@@ -31,4 +34,8 @@ function show_image(i){
     if(yearW > years.length -1)
         yearW = 0;
 
+    price.innerText = priceWatch[watchPrice++];
+
+    if(watchPrice > priceWatch.length -1)
+        watchPrice = 0;
 }

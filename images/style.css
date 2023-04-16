@@ -283,6 +283,19 @@ hr{
 .top article p{
     font-size: .6rem;
 }
+.bottom-end article{
+   
+    padding-left: 1rem;
+}
+.bottom-end article p{
+    font-size: .6rem;
+}
+.bottom-end{
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem ;
+    
+}
 .right-side-bottom{
     display: flex;
     flex-direction: column;
