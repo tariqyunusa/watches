@@ -1,4 +1,7 @@
 var index = 0;
+var yearW = 0;
+var titleNew = 0;
+
 
 show_image(index);
 
@@ -7,29 +10,25 @@ function show_image(i){
     var year = document.getElementById("year");
     var images = document.getElementsByClassName("image");
     var title = document.getElementById('title');
-    const watchName = ["RAZANETTI", "SANIEGE"];
-    const years = ["1971", "1984"];
+    var watchName = ["DIUEGE", "SANIEGE"];
+    var years = ["1971", "1992"];
 
     for(i = 0; i < images.length; i++)
         images[i].style.display = "none"
     
-    if (index > images.length -1)
-        index = 0;
-
-    if (index < 0)
-    index = images.length - 1;
-
+        if (index > images.length -1)
+            index = 0;
     images[index].style.display = "block";
-    title.innerHTML = watchName[index++];
-    year.textContent = years[index++];
 
-    for(j = 0; j <title.length; j++)
-        
+    title.innerText = watchName[titleNew++];
+    
+    if(titleNew > watchName.length -1)
+        titleNew = 0;
 
-    if(index > title.length -1)
-        index = 0;
 
-    if(index < 0)
-        index = title.length -1;
+    year.innerText = years[yearW++];
+
+    if(yearW > years.length -1)
+        yearW = 0;
 
 }
